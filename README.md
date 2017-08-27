@@ -7,6 +7,6 @@ Clone the directory.
 
 Run node server.js in the terminal where the cloned directory is located.
 
-Open the browser to go the link http://127.0.0.1:8888/
+Open the browser to go the link -  http://127.0.0.1:8888/
 
-Click the spin button to start the casino
+Click the spin button to start the slot machine.
