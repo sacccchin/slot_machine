@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#FAFAFA;
+}
+
+#result {
+ text-align: center;
+ font-size: 24px;
+}
+
+#spin {
+	position: absolute;
+	left: 50%;
+	top: 380px;
+	margin-left: -15px;
+	background-image: url(button.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #DDD;
+	border: 0px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.icon img {
+	width: 150px;
+	height: 85px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.slots {
+  width: 626px;
+  background-color: #DDD;
+  padding: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -220px;
+}
+
+.window {
+  position: relative;
+  overflow: hidden;
+  height: 325px;
+  padding: 3px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.outer-col {
+  width: 169px;
+  float: left;
+  margin: 0 2px;
+  background-color: #eee;
+}
+.col {
+  padding: 10px;
+  will-change: true;
+  
+}
+.slots.spinning .outer-col:nth-of-type(2) .col {
+  animation-delay: 0.1s;
+}
+
+.slots.spinning .outer-col:nth-of-type(3) .col  {
+  animation-delay: 0.2s;
+}
+
+.slots.spinning .col {
+  animation: scroll 3s cubic-bezier(.5,0,.5,1) 1, blur 3s cubic-bezier(.5,0,.5,1) 1;
+}
+
+@keyframes scroll {
+  0% {transform: translate3d(0,0,0);}
+  90% {transform: translate3d(0,calc(-100% + 328px),0);}
+  100% {transform: translate3d(0,calc(-100% + 332px),0);}
+}
+@keyframes blur {
+  0% {filter: blur(0);}
+  10% {filter: blur(0);}
+  30% {filter: blur(6px);}
+  60% {filter: blur(6px);}
+  80% {filter: blur(0);}
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  50% {transform: rotate(-10deg);}
+  100% {transform: rotate(10deg);}
+}
