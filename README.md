@@ -13,3 +13,4 @@ Click the spin button to start the slot machine.
 
 The slot machine is tested on modern browser chrome, firefox and safari on a Mac OSX.
 
+Whenever you spin the slot machine a javascript object with three random numbers are returned which displays the corresponding images according to name of image file ending with a integer in 0-5.
